@@ -10,9 +10,9 @@
 
 .sub-nav-container .sub-nav-title {
     display: flex;
-    font-size: 1.25em;
+    font-size: 1.5em;
     font-family: "Open Sans", Sans-serif;
-    padding: 1em;
+    padding: 1em 1em 1em 0.5em;
 }
 
 .sub-nav {
@@ -24,7 +24,7 @@
     color: #1A1A1A;
     margin-right: 15px;
     font-weight: bold;
-    font-size: 0.6em;
+    font-size: 0.8em;
     text-decoration: none;
 }
 
