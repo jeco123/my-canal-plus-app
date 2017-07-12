@@ -2,7 +2,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 3em;
     background-color: #FAFBFC;
     border-bottom: 0.01em;
     border-bottom-style: solid;
@@ -11,11 +10,9 @@
 
 .sub-nav-container .sub-nav-title {
     display: flex;
-    padding-left: 1em;
-}
-
-.sub-nav-title h2 {
-    font-size: 1em;
+    font-size: 1.25em;
+    font-family: "Open Sans", Sans-serif;
+    padding: 1em;
 }
 
 .sub-nav {

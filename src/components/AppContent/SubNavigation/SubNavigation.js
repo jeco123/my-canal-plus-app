@@ -6,7 +6,7 @@ class SubNavigation extends Component {
     return (
         <div className="sub-nav-container">
             <div className="sub-nav-title">
-                <h2>Discover films and series</h2>
+                <span>Discover films and series</span>
             </div>
             <ul className="sub-nav">
                 <li>
