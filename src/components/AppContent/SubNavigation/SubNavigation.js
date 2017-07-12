@@ -10,13 +10,13 @@ class SubNavigation extends Component {
             </div>
             <ul className="sub-nav">
                 <li>
-                    <span>All</span>
+                    <a href="#"><span>All</span></a>
                 </li>
                 <li>
-                    <span>Series</span>
+                    <a href="#"><span>Series</span></a>
                 </li>
                 <li>
-                    <span>Movies</span>
+                    <a href="#"><span>Movies</span></a>
                 </li>
             </ul>
         </div>
