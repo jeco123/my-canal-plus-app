@@ -42,7 +42,7 @@ class AppContent extends Component {
     return (
       <div className="main-content">
         <SubNavigation />
-        <ul>
+        <ul className="list-items-container">
           {
             this.state.listItems.map(item =>
               <ListItemCard key={item.id} item={item} />

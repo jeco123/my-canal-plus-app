@@ -12,10 +12,6 @@ class ListItemCard extends Component {
                 <div className="list-item-card-image">
                     <img src={this.props.item.thumbnail}/>
                 </div>
-                <div className="list-item-card-info">
-                    <p className="title">My card</p>
-                    <p className="summary">lorem ipsum blabla</p>
-                </div>
             </div>
         );
     }
