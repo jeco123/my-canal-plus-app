@@ -1,11 +1,14 @@
 .list-item-card{
-    display: flex;
+  margin-left: 30px;
 }
 
 .list-item-card .list-item-card-image{
-
+    width:200px;
 }
 
+.list-item-card-image img {
+  max-width:100%;
+}
 .list-item-card .list-item-card-info{
     
 }

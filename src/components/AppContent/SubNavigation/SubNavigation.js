@@ -4,7 +4,7 @@ import './SubNavigation.css';
 class SubNavigation extends Component {
   render() {
     return (
-        <div className="sub-nav-container">
+        <section className="sub-nav-container">
             <div className="sub-nav-title">
                 <span>Discover films and series</span>
             </div>
@@ -19,7 +19,7 @@ class SubNavigation extends Component {
                     <a href="#"><span>Movies</span></a>
                 </li>
             </ul>
-        </div>
+        </section>
     );
   }
 }

@@ -2,17 +2,13 @@ import React, { Component } from 'react';
 import './ListItemCard.css';
 
 class ListItemCard extends Component {
-    constructor(props){
-        super(props)
-        console.log(props)
-    }
     render() {
         return (
-            <div className="list-item-card">
+            <li className="list-item-card">
                 <div className="list-item-card-image">
-                    <img src={this.props.item.thumbnail}/>
+                    <img src={this.props.item.thumbnail} alt={this.props.item.title}/>
                 </div>
-            </div>
+            </li>
         );
     }
 }
