@@ -4,12 +4,13 @@ import './ListItemCard.css';
 class ListItemCard extends Component {
     constructor(props){
         super(props)
+        console.log(props)
     }
     render() {
         return (
             <div className="list-item-card">
                 <div className="list-item-card-image">
-                    <img src="http://via.placeholder.com/350x150"/>
+                    <img src={this.props.item.thumbnail}/>
                 </div>
                 <div className="list-item-card-info">
                     <p className="title">My card</p>
