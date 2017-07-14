@@ -18,6 +18,7 @@
 .sub-nav {
     display: flex;
     align-self: flex-end;
+    padding: 5px;
 }
 
 .sub-nav li a {

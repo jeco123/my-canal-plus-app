@@ -1,19 +1,29 @@
 .list-item-card{
-  margin-left: 24px;
-  margin-top: 24px;
-  cursor: pointer;
+  width: 185px;
+  margin-right: 24px;
+  margin-bottom: 24px;
 }
 
-.list-item-card:hover{
+.list-item-card-image:hover{
   opacity: 0.8;
 }
 
 .list-item-card-image{
   width: 185px;
-  height: 282px;
+  height: 278px;
+  box-shadow: 0 1px 5px rgba(25,25,34,.12);
+  border-radius: 4px;
+  cursor: pointer;
+  overflow: hidden;
 }
 
 .list-item-card-image img {
   max-width: 100%;
   max-height: 100%;
+}
+
+.list-item-card-info h4{
+    color: #72727d;
+    font-family: "Open Sans",Arial,sans-serif;
+    font-weight: 400;
 }

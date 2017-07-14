@@ -8,6 +8,9 @@ class ListItemCard extends Component {
                 <div className="list-item-card-image">
                     <img src={this.props.item.thumbnail} alt={this.props.item.title}/>
                 </div>
+                <div className="list-item-card-info">
+                    <h4>{this.props.item.title}</h4>
+                </div>
             </li>
         );
     }

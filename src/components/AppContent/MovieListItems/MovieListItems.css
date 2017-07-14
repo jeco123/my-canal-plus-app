@@ -1,7 +1,33 @@
- .list-items-container{
+.movie-list-container{
+    display: flex;
+    flex-direction: column;
+} 
+
+.list-items-grid{
     display: flex;
     flex-wrap: wrap;
-    box-sizing: border-box;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: -24px;
+}
+
+.headings{
+    display: flex;
+    flex-direction: column;
+}
+
+.heading-2{
+    color: #32323d;
+    font-family: "Open Sans",Arial,sans-serif;
+    font-size: 18px;
+    letter-spacing: .8px;
+    font-weight: 600;
+}
+
+.container{
+    padding: 24px;
+}
+
+ul{
+    margin: 0;
+    list-style: none;
+    padding: 0;
 }
