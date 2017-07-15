@@ -1,8 +1,9 @@
 .movie-list-container{
     display: flex;
     flex-direction: column;
-    width: 1230px;
+    max-width: 1230px;
     align-self: center;
+    width: 100%;
 } 
 
 .list-items-grid{
