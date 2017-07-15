@@ -59,6 +59,10 @@
     cursor: default;
     opacity: .3;
 }
+.horizontal-control:hover:not(.disabled) {
+    background-color: #fff;
+    color: #007feb;
+}
 
 ul,li{
     margin: 0;
@@ -66,7 +70,8 @@ ul,li{
     padding: 0;
 }
 button{
-background: 0 0;
+    background: 0 0;
+    outline:0;
 }
 
 
