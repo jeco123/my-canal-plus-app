@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './AppContent.css';
 import SubNavigation from './SubNavigation/SubNavigation';
 import MovieListItems from './MovieListItems/MovieListItems';
 
@@ -8,7 +7,14 @@ class AppContent extends Component {
     return (
       <div className="main-content">
         <SubNavigation />
-        <MovieListItems/>
+        <div style={{flexDirection: 'column',  display: 'flex'}}>
+          <MovieListItems />
+          <MovieListItems />
+          <MovieListItems />
+          <MovieListItems />
+          <MovieListItems />
+          <MovieListItems />
+        </div>
       </div>
     );
   }
