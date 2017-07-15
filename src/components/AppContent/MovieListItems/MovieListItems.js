@@ -10,9 +10,6 @@ const MOVIE_DB_API_V_3 = moviedb(API_KEY);
 class MovieListItems extends Component {
   constructor(props) {
     super(props);
-    this.props = {
-
-    };
     this.state = {
       listItems: [],
       translationValue: 0,
@@ -21,7 +18,8 @@ class MovieListItems extends Component {
     };
   }
   componentDidMount() {
-    MOVIE_DB_API_V_3.discoverMovie((err, data) => {
+    MOVIE_DB_API_V_3.discoverMovie({sort_by: 'popularity.desc'
+      },(err, data) => {
       console.log(data)
       this.setState({
         listItems: data.results.reduce((acc, item) => {

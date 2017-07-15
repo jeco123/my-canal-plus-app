@@ -15,6 +15,8 @@
   border-radius: 4px;
   cursor: pointer;
   overflow: hidden;
+  transition-duration: .15s;
+  transition-property: opacity;
 }
 
 .list-item-card-image img {
