@@ -4,6 +4,7 @@
     max-width: 1230px;
     align-self: center;
     width: 100%;
+    position: relative;
 }
 
 .horizontal-grid-container.container{    

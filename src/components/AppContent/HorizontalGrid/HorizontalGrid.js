@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './HorizontalGrid.css';
-import HorizontalControl from './HorizontalControl/HorizontalControl';
-import GridCard from './GridCard/GridCard';
+import {HorizontalControl} from './HorizontalControl/HorizontalControl';
+import {GridCard} from './GridCard/GridCard';
+import HorizontalGridDetailsContent from './HorizontalGridDetailsContent/HorizontalGridDetailsContent';
 
 class HorizontalGrid extends Component {
     constructor(props) {

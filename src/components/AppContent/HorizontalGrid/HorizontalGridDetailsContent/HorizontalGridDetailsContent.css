@@ -1,0 +1,18 @@
+.horizontal-grid-details {
+    left: 0;
+    right: 0;
+    position: relative;
+}
+
+.horizontal-grid-details-content {
+    opacity: 0;
+    height: 0;
+    background-color: black;
+    color:white;
+    transition: height .54s cubic-bezier(.5,0,.1,1) 0s,opacity .44s cubic-bezier(.5,0,.1,1) .1s;
+}
+
+.horizontal-grid-details.open .horizontal-grid-details-content {
+    opacity: 1;
+    height: 34vw;
+}

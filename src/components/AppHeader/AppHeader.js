@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
+import {NavigationBar} from './NavigationBar/NavigationBar';
+import {SubNavigation} from './SubNavigation/SubNavigation';
 import logo from './assets/logo_cplus.svg';
 import './AppHeader.css';
 
 class AppHeader extends Component {
     render() {
+        let navItems = [
+            {name: "All"},
+            {name: "Movies"},
+            {name: "Series"}
+        ]
         return (
             <header className="header">
-                <div className="navigation-bar">
-                    <div className="navigation-bar-logo">
-                        <img src={logo} className="logo" alt="logo" />
-                    </div>
-                </div>
+                <NavigationBar logo={logo}/>
+                <SubNavigation title="Discover serie and movies" navItems={navItems}/>
             </header>
         );
     }

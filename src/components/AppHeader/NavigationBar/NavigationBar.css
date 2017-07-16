@@ -1,0 +1,20 @@
+.navigation-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #222;
+    height: 6em;
+    color: white;
+}
+
+.navigation-bar .navigation-bar-logo {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    height: 2.25em;
+}
+
+.navigation-bar-logo .logo{
+    display: flex;
+}
+
