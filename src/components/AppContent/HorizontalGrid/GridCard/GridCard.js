@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
-import './ListItemCard.css';
+import './GridCard.css';
 
-class ListItemCard extends Component {
+class GridCard extends Component {
     render() {
         return (
             <li className="list-item-card">
                 <div className="list-item-card-image">
-                    <img src={this.props.item.thumbnail} alt={this.props.item.title}/>
+                    <img src={this.props.thumbnail} alt={this.props.title}/>
                 </div>
                 <div className="list-item-card-info">
-                    <h4>{this.props.item.title}</h4>
+                    <h4>{this.props.title}</h4>
                 </div>
             </li>
         );
     }
 }
 
-export default ListItemCard;
+export default GridCard;

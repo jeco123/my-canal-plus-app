@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './HorizontalGrid.css';
 import HorizontalControl from './HorizontalControl/HorizontalControl';
-import ListItemCard from './ListItemCard/ListItemCard';
+import GridCard from './GridCard/GridCard';
 
 class HorizontalGrid extends Component {
     constructor(props) {
@@ -51,7 +51,7 @@ class HorizontalGrid extends Component {
                     <ul className="list-items-grid" style={{ transform: `translateX(${this.state.translationValue}px)` }}>
                         {
                             this.props.items.map(item =>
-                                <ListItemCard key={item.id} item={item} />
+                                <GridCard key={item.id} {...item} />
                             )}
                     </ul>
                 </div>
