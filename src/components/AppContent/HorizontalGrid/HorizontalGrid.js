@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './HorizontalGrid.css';
 import { HorizontalControl } from './HorizontalControl/HorizontalControl';
 import { GridCard } from './GridCard/GridCard';
-import HorizontalGridDetailsContent from './HorizontalGridDetailsContent/HorizontalGridDetailsContent';
 
 class HorizontalGrid extends Component {
     constructor(props) {
@@ -26,7 +25,6 @@ class HorizontalGrid extends Component {
         } else if (window.matchMedia("(min-width:660px)").matches) {
             nbImages = 3;
         }
-        console.log(nbImages);
         return nbImages;
     }
 
@@ -65,7 +63,7 @@ class HorizontalGrid extends Component {
             computedValue = computedValue > 0 ? 0 : computedValue;
             return {
                 translationValue: computedValue,
-                lastControlDisabled: (computedValue == 0),
+                lastControlDisabled: (computedValue === 0),
                 nextControlDisabled: false
             }
         });
@@ -75,7 +73,7 @@ class HorizontalGrid extends Component {
             let computedValue = prev.translationValue - prev.nbImages * (185 + 24);
             let optimizedComputation = -(props.items.length-prev.nbImages) * (185 + 24);
             computedValue = computedValue < optimizedComputation ? optimizedComputation : computedValue;
-            let nextControlDisabled =  optimizedComputation == computedValue;
+            let nextControlDisabled =  optimizedComputation === computedValue;
             return {
                 lastControlDisabled: false,
                 nextControlDisabled: nextControlDisabled,

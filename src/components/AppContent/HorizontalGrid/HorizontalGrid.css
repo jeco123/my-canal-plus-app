@@ -6,7 +6,7 @@
     width: 100%;
     position: relative;
     transition-property: max-width;
-    transition-duration: 1s;
+    transition-duration: 0.25s;
 }
 
 @media (min-width: 660px){
