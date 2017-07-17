@@ -62,6 +62,7 @@ class HorizontalGrid extends Component {
     onLast = () => {
         this.setState((prev, props) => {
             let computedValue = (prev.translationValue < 0) ? prev.translationValue + prev.nbImages * (185 + 24) : 0;
+            computedValue = computedValue > 0 ? 0 : computedValue;
             return {
                 translationValue: computedValue,
                 lastControlDisabled: (computedValue == 0),
@@ -72,7 +73,9 @@ class HorizontalGrid extends Component {
     onNext = () => {
         this.setState((prev, props) => {
             let computedValue = prev.translationValue - prev.nbImages * (185 + 24);
-            let nextControlDisabled = -(Math.floor(props.items.length / prev.nbImages) - 1) * prev.nbImages * (185 + 24) == computedValue;
+            let optimizedComputation = -(props.items.length-prev.nbImages) * (185 + 24);
+            computedValue = computedValue < optimizedComputation ? optimizedComputation : computedValue;
+            let nextControlDisabled =  optimizedComputation == computedValue;
             return {
                 lastControlDisabled: false,
                 nextControlDisabled: nextControlDisabled,
