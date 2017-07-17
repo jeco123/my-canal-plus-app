@@ -2,19 +2,37 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #222;
-    height: 6em;
+    background-color: #0e0e0e;
+    height: 100px;
     color: white;
 }
 
-.navigation-bar .navigation-bar-logo {
+.navigation-bar{
+    position: fixed;
+    left: 0;
+    right: 0;
+    opacity: 0.75;
+    z-index: 999;
+    will-change: transform;
+    transition: 200ms ease-out;
+}
+
+.show {
+    transform: translateY(0);
+}
+
+.hide {
+    transform: translateY(-100%);
+}
+
+.navigation-bar-logo {
     display: flex;
     justify-content: center;
     flex-grow: 1;
     height: 2.25em;
 }
 
-.navigation-bar-logo .logo{
+.logo{
     display: flex;
 }
 
