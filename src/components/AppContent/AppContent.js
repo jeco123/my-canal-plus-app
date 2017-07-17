@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import MovieListItems from './MovieListItems/MovieListItems';
+import HorizontalGrid from './HorizontalGrid/HorizontalGrid';
 import moviedb from 'moviedb';
 
 const IMAGE_DB_API = 'https://image.tmdb.org/t/p/w185_and_h278_bestv2';
@@ -67,9 +67,9 @@ class AppContent extends Component {
   render() {
     return (
       <div style={{ flexDirection: 'column', display: 'flex' }}>
-        <MovieListItems title="MOST POPULAR MOVIES" subTitle="Selection of the most popular movies" items={this.state.movies} />
-        <MovieListItems title="MOST POPULAR KIDS MOVIES" subTitle="Selection of the most popular kids movies" items={this.state.kids} />
-        <MovieListItems title="BEST DRAMAS" subTitle="Selection of the best dramas" items={this.state.dramas} />
+        <HorizontalGrid title="MOST POPULAR MOVIES" subTitle="Selection of the most popular movies" items={this.state.movies} />
+        <HorizontalGrid title="MOST POPULAR KIDS MOVIES" subTitle="Selection of the most popular kids movies" items={this.state.kids} />
+        <HorizontalGrid title="BEST DRAMAS" subTitle="Selection of the best dramas" items={this.state.dramas} />
       </div>
     );
   }
