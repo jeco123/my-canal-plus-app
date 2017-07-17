@@ -7,7 +7,7 @@
 .background{
     background-image: url('./assets/fond-description2.jpg');
     background-size: cover;
-    background-position: 72%;
+    background-position: 72% 0%;
     min-height: 100vh;
     top: 0;
 }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './HorizontalGrid.css';
-import {HorizontalControl} from './HorizontalControl/HorizontalControl';
-import {GridCard} from './GridCard/GridCard';
+import { HorizontalControl } from './HorizontalControl/HorizontalControl';
+import { GridCard } from './GridCard/GridCard';
 import HorizontalGridDetailsContent from './HorizontalGridDetailsContent/HorizontalGridDetailsContent';
 
 class HorizontalGrid extends Component {
@@ -9,14 +9,44 @@ class HorizontalGrid extends Component {
         super(props);
         this.state = {
             translationValue: 0,
+            nbImages: 5,
             lastControlDisabled: true,
             nextControlDisabled: false
         };
     }
 
+    componentDidMount() {
+        window.matchMedia("(min-width:480px)").addListener((evt) => {
+            this.setState({
+                nbImages: evt.matches ? 2 : 1
+            })
+        });
+
+        window.matchMedia("(min-width:660px)").addListener((evt) => {
+            this.setState({
+                nbImages: evt.matches ? 3 : 2
+            })
+        });
+        window.matchMedia("(min-width:840px)").addListener((evt) => {
+            this.setState({
+                nbImages: evt.matches ? 4 : 3
+            })
+        });
+        window.matchMedia("(min-width:1060px)").addListener((evt) => {
+            this.setState({
+                nbImages: evt.matches ? 5 : 4
+            })
+        });
+        window.matchMedia("(min-width:1280px)").addListener((evt) => {
+            this.setState({
+                nbImages: evt.matches ? 6 : 5
+            })
+        });
+    }
+
     onLast = () => {
         this.setState((prev, props) => {
-            let computedValue = (prev.translationValue < 0) ? prev.translationValue + 5 * (185 + 24) : 0;
+            let computedValue = (prev.translationValue < 0) ? prev.translationValue + prev.nbImages * (185 + 24) : 0;
             return {
                 translationValue: computedValue,
                 lastControlDisabled: (computedValue == 0),
@@ -26,8 +56,8 @@ class HorizontalGrid extends Component {
     }
     onNext = () => {
         this.setState((prev, props) => {
-            let computedValue = prev.translationValue - 5 * (185 + 24);
-            let nextControlDisabled = -(Math.floor(props.items.length / 5) - 1) * 5 * (185 + 24) == computedValue;
+            let computedValue = prev.translationValue - prev.nbImages * (185 + 24);
+            let nextControlDisabled = -(Math.floor(props.items.length / prev.nbImages) - 1) * prev.nbImages * (185 + 24) == computedValue;
             return {
                 lastControlDisabled: false,
                 nextControlDisabled: nextControlDisabled,
