@@ -14,7 +14,6 @@ class NavigationBar extends Component {
     }
 
     handleScroll = (evt) => {
-        console.log(evt.srcElement.body.scrollTop);
         this.setState({
             hide: (evt.srcElement.body.scrollTop > 100) ? true : false
         })
