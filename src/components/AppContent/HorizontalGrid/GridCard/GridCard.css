@@ -1,10 +1,11 @@
 .list-item-card{
   width: 185px;
   margin-right: 24px;
+  position: relative;
 }
 
 .list-item-card-image:hover{
-  opacity: 0.8;
+  opacity: 0.90;
 }
 
 .list-item-card-image{
@@ -14,7 +15,7 @@
   border-radius: 4px;
   cursor: pointer;
   overflow: hidden;
-  transition-duration: .15s;
+  transition-duration: .25s;
   transition-property: opacity;
 }
 
