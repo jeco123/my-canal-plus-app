@@ -9,10 +9,25 @@ class HorizontalGrid extends Component {
         super(props);
         this.state = {
             translationValue: 0,
-            nbImages: 5,
+            nbImages: this.getNbImages(),
             lastControlDisabled: true,
             nextControlDisabled: false
         };
+    }
+
+    getNbImages() {
+        let nbImages = 2;
+        if (window.matchMedia("(min-width:660px)").matches) {
+            nbImages = 3;
+        } else if (window.matchMedia("(min-width:840px)").matches) {
+            nbImages = 4;
+        } else if (window.matchMedia("(min-width:1060px)").matches) {
+            nbImages = 5;
+        } else if (window.matchMedia("(min-width:1280px)").matches) {
+            nbImages = 5;
+        }
+        console.log(nbImages);
+        return nbImages;
     }
 
     componentDidMount() {
