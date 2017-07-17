@@ -17,14 +17,14 @@ class HorizontalGrid extends Component {
 
     getNbImages() {
         let nbImages = 2;
-        if (window.matchMedia("(min-width:660px)").matches) {
-            nbImages = 3;
-        } else if (window.matchMedia("(min-width:840px)").matches) {
-            nbImages = 4;
+        if (window.matchMedia("(min-width:1280px)").matches) {
+            nbImages = 6;
         } else if (window.matchMedia("(min-width:1060px)").matches) {
             nbImages = 5;
-        } else if (window.matchMedia("(min-width:1280px)").matches) {
-            nbImages = 5;
+        } else if (window.matchMedia("(min-width:840px)").matches) {
+            nbImages = 4;
+        } else if (window.matchMedia("(min-width:660px)").matches) {
+            nbImages = 3;
         }
         console.log(nbImages);
         return nbImages;
