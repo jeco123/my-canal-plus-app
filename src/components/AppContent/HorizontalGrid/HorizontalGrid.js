@@ -3,6 +3,9 @@ import './HorizontalGrid.css';
 import { HorizontalControl } from './HorizontalControl/HorizontalControl';
 import { GridCard } from './GridCard/GridCard';
 
+const IMG_WIDTH = 185;
+const IMG_PAD_RIGHT = 24;
+
 class HorizontalGrid extends Component {
     constructor(props) {
         super(props);
@@ -59,7 +62,7 @@ class HorizontalGrid extends Component {
 
     onLast = () => {
         this.setState((prev, props) => {
-            let computedValue = (prev.translationValue < 0) ? prev.translationValue + prev.nbImages * (185 + 24) : 0;
+            let computedValue = (prev.translationValue < 0) ? prev.translationValue + prev.nbImages * (IMG_WIDTH + IMG_PAD_RIGHT) : 0;
             computedValue = computedValue > 0 ? 0 : computedValue;
             return {
                 translationValue: computedValue,
@@ -70,8 +73,8 @@ class HorizontalGrid extends Component {
     }
     onNext = () => {
         this.setState((prev, props) => {
-            let computedValue = prev.translationValue - prev.nbImages * (185 + 24);
-            let optimizedComputation = -(props.items.length-prev.nbImages) * (185 + 24);
+            let computedValue = prev.translationValue - prev.nbImages * (IMG_WIDTH + IMG_PAD_RIGHT);
+            let optimizedComputation = -(props.items.length-prev.nbImages) * (IMG_WIDTH + IMG_PAD_RIGHT);
             computedValue = computedValue < optimizedComputation ? optimizedComputation : computedValue;
             let nextControlDisabled =  optimizedComputation === computedValue;
             return {
