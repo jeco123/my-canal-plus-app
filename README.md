@@ -1,4 +1,20 @@
+## Technical choices
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+
+No redux architecture has been implemented in this version of this app. However, As the application grows, the implementation of a REDUX architecture seems to be interesting. Indeed, this type of architecture allows a better separation of concerns as well as a unidirectional data flow.
+
+I did not implement the ability to access the details of a movie. I had the idea to implement this functionality as Netflix do ie without modal dialog or pop up but extending a place holder under the image gallery. This implementation seems to me interesting for the user experience. But for this fonctionnality i need more time. (2d)
+
+The moviedb lib for nodejs has been used for the api queries instead of axio for ex. It was simple to use and chain operations is possible.
+
+I did not used any ui framework but only the embeded flex functionality. 
+
+I try to do my best to respect some responsive aspects of the layout. However, some bugs (playing with the resizing of the browser window) need to be fixed.
+
+I really hope that you'll enjoy my work. I really enjoyed working with the ReactJS lib. I forgot how it's more simple & accessible as Angular2 & even ViewJS.
+
+
+Jérôme.
 
 Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
