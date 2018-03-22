@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import hamburger from './assets/hamburger.svg';
 import './NavigationBar.css';
 
 class NavigationBar extends Component {
@@ -15,7 +16,7 @@ class NavigationBar extends Component {
 
     handleScroll = (evt) => {
         this.setState({
-            hide: (evt.srcElement.body.scrollTop > 100) ? true : false
+            hide: (window.pageYOffset > 100) ? true : false
         })
     }
 
@@ -24,6 +25,7 @@ class NavigationBar extends Component {
         return (
             <div className={this.state.hide ? 'navigation-bar hide' : 'navigation-bar show'}>
                 <div className="navigation-bar-logo">
+                    <img src={hamburger} className="hamburger" alt="menu" />
                     <img src={this.props.logo} className="logo" alt="logo" />
                 </div>
             </div>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import HorizontalGrid from './HorizontalGrid/HorizontalGrid';
 import moviedb from 'moviedb';
+import './AppContent.css';
 
 const IMAGE_DB_API = 'https://image.tmdb.org/t/p/w185_and_h278_bestv2';
 const API_KEY = '92b418e837b833be308bbfb1fb2aca1e';
@@ -66,7 +67,7 @@ class AppContent extends Component {
 
   render() {
     return (
-      <div style={{ flexDirection: 'column', display: 'flex' }}>
+      <div className="content">
         <HorizontalGrid title="MOST POPULAR MOVIES" subTitle="Selection of the most popular movies" items={this.state.movies} />
         <HorizontalGrid title="MOST POPULAR KIDS MOVIES" subTitle="Selection of the most popular kids movies" items={this.state.kids} />
         <HorizontalGrid title="BEST DRAMAS" subTitle="Selection of the best dramas" items={this.state.dramas} />
