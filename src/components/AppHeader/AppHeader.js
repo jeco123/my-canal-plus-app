@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import NavigationBar from './NavigationBar/NavigationBar';
+import NavigationBar from './NavigationBar';
 import logo from './assets/logo_cplus.svg';
 import './AppHeader.css';
 

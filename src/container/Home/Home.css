@@ -1,0 +1,20 @@
+.Home {
+}
+
+.horizontal-grid:first-child {
+  padding: 48px 0px 24px;
+}
+
+.horizontal-grid {
+  padding: 24px 0px;
+}
+
+@media (min-width : 660px) { 
+  .horizontal-grid:first-child {
+    padding: 96px 0px 48px;
+  }
+  
+  .horizontal-grid {
+    padding: 48px 0px;
+  }
+}
