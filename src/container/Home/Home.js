@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { fetchGenres } from '../../actions/genres';
 import HorizontalGrid from '../../components/HorizontalGrid';
 import moviedb from 'moviedb';
 import './Home.css';
@@ -18,6 +20,7 @@ class Home extends Component {
   }
 
   componentDidMount() {
+    this.props.getGenres();
     MOVIE_DB_API_V_3.discoverMovie({
       'sort_by': 'popularity.desc'
     }, (err, data) => {
@@ -91,4 +94,10 @@ class Home extends Component {
   }
 }
 
-export default Home;
+const mapDispatchToProps = (dispatch) => {
+  return {
+      getGenres: () => dispatch(fetchGenres())
+  }
+}
+
+export default connect(null, mapDispatchToProps)(Home);
