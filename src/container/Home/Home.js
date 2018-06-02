@@ -3,12 +3,8 @@ import { connect } from 'react-redux';
 import { fetchThisWeekMovies } from '../../actions/moviedb';
 import HorizontalGrid from '../../components/HorizontalGrid';
 import MovieDate from '../../utilities/date';
-// import moviedb from 'moviedb';
-import './Home.css';
 
-// const IMAGE_DB_API = 'https://image.tmdb.org/t/p/w185_and_h278_bestv2';
-// const API_KEY = '92b418e837b833be308bbfb1fb2aca1e';
-// const MOVIE_DB_API_V_3 = moviedb(API_KEY);
+import './Home.css';
 
 class Home extends Component {
 
