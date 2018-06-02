@@ -8,35 +8,12 @@
 }
 
 .list-item-card-image{
-  width: 185px;
+  width: 215px;
   height: 185px;
   box-shadow: 0 1px 5px rgba(25,25,34,.12);
   border-radius: 4px;
   cursor: pointer;
 }
-
-.list-item-card-image img {
-  width: 100%;
-  height: auto;
-}
-
-/*
-.list-item-card-image{
-  width: 185px;
-  height: 278px;
-  box-shadow: 0 1px 5px rgba(25,25,34,.12);
-  border-radius: 4px;
-  cursor: pointer;
-  overflow: hidden;
-  transition-duration: .25s;
-  transition-property: opacity;
-}*/
-
-/*
-.list-item-card-image img {
-  max-width: 100%;
-  max-height: 100%;
-}*/
 
 .list-item-card-info h4{
     color: #72727d;

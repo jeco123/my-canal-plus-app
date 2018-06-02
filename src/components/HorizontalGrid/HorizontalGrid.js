@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './HorizontalGrid.css';
-import { HorizontalControl } from './HorizontalControl/HorizontalControl';
+// import { HorizontalControl } from './HorizontalControl/HorizontalControl';
 import { GridCard } from './GridCard/GridCard';
 
 const IMG_WIDTH = 185;
@@ -90,12 +90,12 @@ class HorizontalGrid extends Component {
                 <div className="headings">
                     <h2 className="heading-2">{this.props.title}</h2>
                     <h3 className="heading-2-sub">{this.props.subTitle}</h3>
-                    {document.body.offsetWidth > 480 &&
+                    {/* {document.body.offsetWidth > 480 &&
                         <div className="horizontal-controls">
                             <HorizontalControl name="Last" disabled={this.state.lastControlDisabled} onClick={this.onLast} />
                             <HorizontalControl name="Next" disabled={this.state.nextControlDisabled} onClick={this.onNext} />
                         </div>
-                    }
+                    } */}
                 </div>
                 <ul className="list-items-grid" style={{ transform: `translateX(${this.state.translationValue}px)` }}>
                     {
