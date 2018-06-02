@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import { genres } from './genres';
+import { moviedb } from './moviedb';
 
 export default combineReducers({
-  genres,
+  moviedb,
 });
