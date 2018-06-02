@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchThisWeekMovies } from '../../actions/moviedb';
 import HorizontalGrid from '../../components/HorizontalGrid';
+import MovieDate from '../../utilities/date';
 // import moviedb from 'moviedb';
 import './Home.css';
 
@@ -21,7 +22,9 @@ class Home extends Component {
         {<div className="horizontal-grid">
           <HorizontalGrid
             title="SORTIES DE LA SEMAINE"
-            subTitle="30 mai - 05 juin"
+            subTitle={
+              `${MovieDate.getFirstDayOfTheWeek('DD MMMM')} - ${MovieDate.getLastDayOfTheWeek('DD MMMM')}`
+            }
             items={this.props.weekMovies.map(id => this.props.moviesPool[id])} />
         </div>}
       </div>
