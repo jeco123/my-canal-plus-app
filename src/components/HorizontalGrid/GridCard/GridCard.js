@@ -1,6 +1,6 @@
 import React from 'react';
 import './GridCard.css';
-import config from '../../../config/moviedb';
+import config from '../../../config/movieDB';
 
 export const GridCard = (props) => {
     return (

@@ -1,5 +1,5 @@
 import moviedb from 'moviedb';
-import movieDB  from '../config/moviedb';
+import movieDB  from '../config/movieDB';
 import MovieDateHelper from '../utilities/date';
 
 // action constants
