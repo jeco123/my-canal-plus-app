@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import ReactStars from 'react-stars';
 import { updateBackground } from '../../actions/header';
 import { fetchMovieInfo } from '../../actions/moviedb';
 import config from '../../config/movieDB';
@@ -31,8 +32,16 @@ class MovieDetails extends Component {
           movie && 
           <div>
             <h1>{movie.title}</h1>
-            <h2>SYNOPSIS ET DÉTAILS</h2>
+            <ReactStars
+              count={5}
+              value={movie.vote_average * 5 / 10}
+              edit={false}
+              size={24} />
+            <div>Film Comédie, France, 2018, 1h32</div>
             <p>{movie.overview}</p>
+            {/* <iframe id="ytplayer" type="text/html" width="425" height="345"
+            src="http://www.youtube.com/embed/KxBBcTtk4vE"
+            frameborder="0"/> */}
           </div>
         }
       </div>
