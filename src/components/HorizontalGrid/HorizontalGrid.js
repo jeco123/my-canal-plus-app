@@ -100,7 +100,7 @@ class HorizontalGrid extends Component {
                 <ul className="list-items-grid" style={{ transform: `translateX(${this.state.translationValue}px)` }}>
                     {
                         this.props.items.map(item =>
-                            <GridCard key={item.id} {...item} url={`${this.props.baseItemUrl}${item.id}`}/>)
+                            <GridCard key={item.id} {...item} url={`${this.props.baseItemUrl}${item.id}`} />)
                     }
                 </ul>
             </div>

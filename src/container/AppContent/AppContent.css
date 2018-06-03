@@ -1,5 +1,7 @@
 .AppContent {
-  padding-top: 75px
+  padding-top: 75px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 @media (min-width : 480px) { 
