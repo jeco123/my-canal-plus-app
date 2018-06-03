@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchThisWeekMovies } from '../../actions/moviedb';
+import { resetBackground } from '../../actions/header';
 import HorizontalGrid from '../../components/HorizontalGrid';
 import MovieDate from '../../utilities/date';
 
@@ -10,6 +11,9 @@ class Home extends Component {
 
   componentDidMount() {
     this.props.getThisWeekMovies();
+  }
+  componentWillReceiveProps() {
+    this.props.resetHeaderBackground();
   }
 
   render() {
@@ -21,7 +25,8 @@ class Home extends Component {
             subTitle={
               `${MovieDate.getFirstDayOfTheWeek('DD MMMM')} - ${MovieDate.getLastDayOfTheWeek('DD MMMM')}`
             }
-            items={this.props.weekMovies.map(id => this.props.moviesPool[id])} />
+            items={this.props.weekMovies.map(id => this.props.moviesPool[id])}
+            baseItemUrl={'/movie/details/'} />
         </div>}
       </div>
 
@@ -35,7 +40,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  getThisWeekMovies: () => dispatch(fetchThisWeekMovies())
+  getThisWeekMovies: () => dispatch(fetchThisWeekMovies()),
+  resetHeaderBackground: () => dispatch(resetBackground())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
