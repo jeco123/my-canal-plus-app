@@ -17,6 +17,7 @@ export const fetchThisWeekMovies = () => dispatch => {
     'region': 'FR',
     'language': 'fr',
     'sort_by': 'primary_release_date_desc',
+    'status': 'Released',
     'primary_release_date.gte':  MovieDateHelper.getFirstDayOfTheWeek('YYYY-MM-DD'),
     'primary_release_date.lte':  MovieDateHelper.getLastDayOfTheWeek('YYYY-MM-DD'),
   }, (err, data) => {

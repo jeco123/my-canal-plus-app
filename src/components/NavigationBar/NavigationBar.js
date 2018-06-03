@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import hamburger from './assets/hamburger.svg';
 import './NavigationBar.css';
 
@@ -26,7 +27,9 @@ class NavigationBar extends Component {
             <div className={this.state.hide ? 'navigation-bar hide' : 'navigation-bar show'}>
                 <div className="navigation-bar-logo">
                     <img src={hamburger} className="hamburger" alt="menu" />
-                    <img src={this.props.logo} className="logo" alt="logo" />
+                    <Link to='/' className="logo">
+                        <img src={this.props.logo} alt="logo" />
+                    </Link>
                 </div>
             </div>
         )
