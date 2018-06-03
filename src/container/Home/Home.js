@@ -21,7 +21,8 @@ class Home extends Component {
             subTitle={
               `${MovieDate.getFirstDayOfTheWeek('DD MMMM')} - ${MovieDate.getLastDayOfTheWeek('DD MMMM')}`
             }
-            items={this.props.weekMovies.map(id => this.props.moviesPool[id])} />
+            items={this.props.weekMovies.map(id => this.props.moviesPool[id])}
+            baseItemUrl={'/movie/details/'}/>
         </div>}
       </div>
 
