@@ -1,0 +1,8 @@
+.VoteRating {
+  display: flex;
+  align-items: center;
+}
+
+.voteStars {
+  margin-right: 10px;
+}

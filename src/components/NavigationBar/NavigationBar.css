@@ -6,12 +6,11 @@
     background-color: #0e0e0e;
     height: 75px;
     color: white;
+    padding: 0 30px;
 }
 
 .navigation-bar-logo {
     display: flex;
-    justify-content: center;
-    flex-grow: 1;
     height: 2em;
 }
 

@@ -1,0 +1,12 @@
+.movieHeader {
+  display: flex;
+}
+
+.moviePicture {
+  margin-right: 10px;
+}
+
+.MovieDetails p {
+  text-align: justify;
+  text-justify: inter-word;
+}
